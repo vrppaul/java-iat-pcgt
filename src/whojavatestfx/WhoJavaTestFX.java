@@ -62,7 +62,7 @@ public class WhoJavaTestFX extends Application {
         //setting the position of the text 
         arrayText.setX(leftMargin); 
         arrayText.setY(190); 
-        arrayText.setWrappingWidth(500);
+        arrayText.setWrappingWidth(515);
         
         Button btn = new Button();
         btn.setText("Add");
@@ -126,6 +126,7 @@ public class WhoJavaTestFX extends Application {
         //setting the position of the text 
         arrayText.setX(leftMargin); 
         arrayText.setY(80); 
+        arrayText.setWrappingWidth(515);
         
         Text confirmContinue = new Text("Do you want to insert another element?");
         //setting the position of the text 
@@ -186,6 +187,7 @@ public class WhoJavaTestFX extends Application {
         //setting the position of the text 
         arrayText.setX(leftMargin); 
         arrayText.setY(80); 
+        arrayText.setWrappingWidth(515);
         
         Button tryAgainButton = new Button();
         tryAgainButton.setText("Try again");
@@ -235,6 +237,7 @@ public class WhoJavaTestFX extends Application {
         //setting the position of the text 
         arrayText.setX(leftMargin); 
         arrayText.setY(80); 
+        arrayText.setWrappingWidth(515);
         
         int maxIndex;
         if  (array.size()-1 >=0) {
