@@ -89,10 +89,10 @@ public class WhoJavaTestFX extends Application {
         textField.setOnAction(event);
         
         Button finishButton = new Button();
-        finishButton.setText("Finish filling the array");
+        finishButton.setText("Finish");
         // setting the position of the button
-        finishButton.setLayoutX(leftMargin);
-        finishButton.setLayoutY(250);
+        finishButton.setLayoutX(400);
+        finishButton.setLayoutY(400);
         
         Group root = new Group(text, btn, textField, arrayTip, arrayText,
         finishButton);
