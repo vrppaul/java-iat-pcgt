@@ -14,6 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -29,12 +30,22 @@ public class allScenes {
         
         // Adding GUI elements to the scene
         Text text = GUIFactory.getElement("text", "Fill the array:", leftMargin, 50); 
+        text.setFont(Font .font("Verdana", 35));
+        text.setFill(Color.DARKMAGENTA);
         TextField textField = GUIFactory.getElement("textfield", "", leftMargin, 80);
-        Text arrayTip = GUIFactory.getElement("text", "Current array:", leftMargin, 150);
-        Text arrayText = GUIFactory.getElement("text", arrayToString(array), leftMargin, 190);
+        textField.setPrefHeight(35);
+        textField.setPrefWidth(300);
+        Text arrayTip = GUIFactory.getElement("text", "Current array:", leftMargin, 160);
+        arrayTip.setFont(Font .font("Verdana", 25));
+        arrayTip.setFill(Color.SANDYBROWN);
+        Text arrayText = GUIFactory.getElement("text", arrayToString(array), leftMargin, 200);
         arrayText.setWrappingWidth(515);
-        Button btn = GUIFactory.getElement("button", "Add", leftMargin + 200, 80);
-        Button finishButton = GUIFactory.getElement("button", "Finish", 400, 400);
+        arrayText.setFont(Font .font("Verdana", 17));
+        arrayText.setFill(Color.DARKCYAN);
+        Button btn = GUIFactory.getElement("button", "Add", leftMargin + 400, 80);
+        btn.setFont(Font .font("Verdana", FontWeight.SEMI_BOLD, 18));
+        Button finishButton = GUIFactory.getElement("button", "Finish", 435, 400);
+        finishButton.setFont(Font .font("Verdana", FontWeight.SEMI_BOLD, 18));
         
         // action event
         EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
@@ -70,13 +81,20 @@ public class allScenes {
             Stage primaryStage) {
         
     	Text arrayTip = GUIFactory.getElement("text", "Current array:", leftMargin, 50);
-    	Text arrayText = GUIFactory.getElement("text", arrayToString(array), leftMargin, 80);
+    	arrayTip.setFont(Font .font("Verdana", 35));
+        arrayTip.setFill(Color.DARKMAGENTA);
+    	Text arrayText = GUIFactory.getElement("text", arrayToString(array), leftMargin, 90);
         arrayText.setWrappingWidth(515);
+        arrayText.setFont(Font .font("Verdana", 17));
+        arrayText.setFill(Color.DARKCYAN);
     	Text confirmContinue = GUIFactory.getElement("text", "Do you want to insert another element?", 
-    			leftMargin, 150);
-        Button yesButton = GUIFactory.getElement("button", "Yes", leftMargin, 180);
-        Button noButton = GUIFactory.getElement("button", "No", leftMargin + 100, 180);
-        
+    			leftMargin, 370);
+    	confirmContinue.setFont(Font .font("Verdana", 20));
+        confirmContinue.setFill(Color.SANDYBROWN);
+        Button yesButton = GUIFactory.getElement("button", "Yes", leftMargin, 400);
+        yesButton.setFont(Font .font("Verdana", FontWeight.SEMI_BOLD, 18));
+        Button noButton = GUIFactory.getElement("button", "No", leftMargin + 100, 400);
+        noButton.setFont(Font .font("Verdana", FontWeight.SEMI_BOLD, 18));
         noButton.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
@@ -101,19 +119,29 @@ public class allScenes {
             Stage primaryStage){
 
     	Text arrayTip = GUIFactory.getElement("text", "Current array:", leftMargin, 50);
-    	Text arrayText = GUIFactory.getElement("text", arrayToString(array), leftMargin, 80);
+    	arrayTip.setFont(Font .font("Verdana", 35));
+        arrayTip.setFill(Color.DARKMAGENTA);
+    	Text arrayText = GUIFactory.getElement("text", arrayToString(array), leftMargin, 90);
+    	arrayText.setFont(Font .font("Verdana", 17));
+        arrayText.setFill(Color.DARKCYAN);
     	
     	int maxIndex = getMaxIndex(array.size());
         
         String outputMessage = String.format("Choose the index between %d and %d: ", 0, maxIndex);
 
-    	Text indexTip = GUIFactory.getElement("text", outputMessage, leftMargin, 150);
+    	Text indexTip = GUIFactory.getElement("text", outputMessage, leftMargin, 310);
+    	indexTip.setFont(Font .font("Verdana", 20));
+        indexTip.setFill(Color.SANDYBROWN);
         
-        TextField textField = GUIFactory.getElement("textfield", "", leftMargin, 180);
+        TextField textField = GUIFactory.getElement("textfield", "", leftMargin, 340);
         
-        Button btn = GUIFactory.getElement("button", "Input the element", leftMargin, 250);
-    	Text warningText = GUIFactory.getElement("text", "", leftMargin, 300);
+        
+        Button btn = GUIFactory.getElement("button", "Input the element", leftMargin, 390);
+        btn.setFont(Font .font("Verdana", FontWeight.SEMI_BOLD, 18));
+    	Text warningText = GUIFactory.getElement("text", "", leftMargin, 460);
         warningText.setFill(Color.RED);
+        warningText.setFont(Font .font("Verdana", 20));
+        
         
         // action event 
         EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
@@ -148,10 +176,16 @@ public class allScenes {
     	
 
     	Text arrayTip = GUIFactory.getElement("text", "Final array:", leftMargin, 50);
-    	Text arrayText = GUIFactory.getElement("text", arrayToString(array), leftMargin, 80);
+    	arrayTip.setFont(Font .font("Verdana", 35));
+        arrayTip.setFill(Color.DARKMAGENTA);
+    	Text arrayText = GUIFactory.getElement("text", arrayToString(array), leftMargin, 90);
+    	arrayText.setFont(Font .font("Verdana", 17));
+        arrayText.setFill(Color.DARKCYAN);
         arrayText.setWrappingWidth(515);
-        Button tryAgainButton = GUIFactory.getElement("button", "Try again", leftMargin, 180);
-        Button finishButton= GUIFactory.getElement("button", "Close", leftMargin + 100, 180);
+        Button tryAgainButton = GUIFactory.getElement("button", "Try again", leftMargin, 400);
+        tryAgainButton.setFont(Font .font("Verdana", FontWeight.SEMI_BOLD, 18));
+        Button finishButton= GUIFactory.getElement("button", "Close", leftMargin + 150, 400);
+        finishButton.setFont(Font .font("Verdana", FontWeight.SEMI_BOLD, 18));
         
         tryAgainButton.setOnAction(new EventHandler<ActionEvent>() {
             
